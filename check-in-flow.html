@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Swamy">
+    <meta name="theme-color" content="#7544e3" />
+    <meta name="keywords" content="">
+    <link href="https://getbootstrap.com/favicon.ico" sizes="16X16" rel="shortcut icon" type="image/png" />
+
+    <title>Entrolog - Dashboard</title>
+
+    <!-- Bootstrap core CSS-->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="vendor/bootstrap/app-style/admin-style.css" rel="stylesheet">
+
+
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="vendor/jquery-mousewheel-scrollbar/css/jquery.mCustomScrollbar.min.css">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Preloder section -->
+    <div class="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+
+
+    <!-- Main Wrapper -->
+    <main class="wrapper">
+
+        <!-- Header Section -->
+        <header class="header-area">
+            <nav class="navbar navbar-expand navbar-light bg-admin">
+                <div class="container">
+                    <button class="btn btn-light btn-circle text-theme order-1 order-sm-0" id="sidebarCollapse">
+                        <i class="material-icons text-theme md-18">menu</i>
+                    </button>
+                    <!-- Navbar Search -->
+                    <form class="form-inline mr-auto mr-0 ml-md-3">
+                        <div class="has-search">
+                            <span class="material-icons md-24 form-control-feedback">search</span>
+                            <input type="text" class="form-control" placeholder="Search...">
+                        </div>
+                    </form>
+                    <!-- Navbar -->
+                    <ul class="navbar-nav ml-auto ml-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link invite text-theme" href="new-invites.html">
+                                <span class="pt-2 d-none d-lg-inline-block"><i class="material-icons md-14">add</i> New
+                                    Invite</span>
+                                <span
+                                    class="mt-1 d-xl-none d-lg-none text-theme btn btn-light btn-circle material-icons md-18">add</span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="material-icons">notifications</i>
+                                <span class="badge badge-danger">9+</span>
+                            </a>
+                            <div class="dropdown-menu notification dropdown-menu-right"
+                                aria-labelledby="alertsDropdown">
+                                <ul>
+                                    <li>
+                                        <div class="drop-title">Your Notifications</div>
+                                    </li>
+                                    <li>
+                                        <div class="notification-center">
+                                            <a href="#">
+                                                <div class="btn btn-danger btn-circle"><i
+                                                        class="material-icons">notifications_none</i></div>
+                                                <div class="notification-contnet">
+                                                    <h5>Luanch Admin</h5> <span class="mail-desc">Just see the my new
+                                                        admin!</span> <span class="time">9:30 AM</span>
+                                                </div>
+                                            </a>
+                                            <a href="#">
+                                                <div class="btn btn-success btn-circle"><i
+                                                        class="material-icons">notifications_none</i></div>
+                                                <div class="notification-contnet">
+                                                    <h5>Event today</h5> <span class="mail-desc">Just a reminder that
+                                                        you have event</span> <span class="time">9:10 AM</span>
+                                                </div>
+                                            </a>
+                                            <a href="#">
+                                                <div class="btn btn-info btn-circle"><i
+                                                        class="material-icons">notifications_none</i></div>
+                                                <div class="notification-contnet">
+                                                    <h5>Settings</h5> <span class="mail-desc">You can customize this
+                                                        template as you want</span> <span class="time">9:08 AM</span>
+                                                </div>
+                                            </a>
+                                            <a href="#">
+                                                <div class="btn btn-primary btn-circle"><i
+                                                        class="material-icons">notifications_none</i></div>
+                                                <div class="notification-contnet">
+                                                    <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my
+                                                        admin!</span>
+                                                    <span class="time">9:02 AM</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="pt-2 nav-link text-center" href="javascript:void(0);"> All
+                                            notifications</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle pt-1" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="images/user-profile.png" width="35" alt="profile-user" class="rounded-circle">
+                                <div class="d-none d-xl-inline-block">Swamy</div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#"><i class="material-icons">settings</i> Settings</a>
+                                <a class="dropdown-item" href="#"><i class="material-icons">style</i> Activity Log</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal"><i
+                                        class="material-icons">exit_to_app</i>
+                                    Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- End Header -->
+
+        <!-- Overlay block -->
+        <div class="menu-overlay"></div>
+
+
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html">
+                    <h2 class="m-0">Entrolog</h2>
+                </a>
+                <!-- branches-dropdown button -->
+                <div class="branches-dropdown">
+                    <a id="selected" class="d-block dropdown-toggle" href="#" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Choose Branch
+                    </a>
+                    <div class="branch-items dropdown-menu">
+                        <a class="dropdown-item" href="#">Hyderabad</a>
+                        <a class="dropdown-item" href="#">Pune</a>
+                        <a class="dropdown-item" href="#">Bangalore</a>
+                        <a class="dropdown-item" href="#">Chennai</a>
+                        <a class="dropdown-item" href="#">kolkata</a>
+                    </div>
+                </div>
+            </div>
+            <ul class="side-menu">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="invites.html">Invites</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="nav-link dropdown-toggle">Settings</a>
+                    <ul class="collapse show sub-menu" id="pageSubmenu">
+                        <li class="subnav-item">
+                            <a class="subnav-link" href="account-settings.html">Account</a>
+                        </li>
+                        <li class="subnav-item active">
+                            <a class="subnav-link" href="check-in-flow.html">Check-in flow</a>
+                        </li>
+                        <li class="subnav-item">
+                            <a class="subnav-link" href="check-out.html">Check Out</a>
+                        </li>
+                        <li class="subnav-item">
+                            <a class="subnav-link" href="notifications.html">Notifications</a>
+                        </li>
+                        <li class="subnav-item">
+                            <a class="subnav-link" href="security.html">Security</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="devices.html">Devices</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="employee-list.html">Employement Directory</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="integrations.html">Intergration</a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <p>&copy; 2019 - Entrolog <br> All Rights Reserved.</p>
+            </div>
+        </nav>
+        <!-- End Sidebar  -->
+
+        <!-- Content Wrapper  -->
+        <div id="content-wrapper">
+
+            <!-- Breadcrumbs2-->
+            <section class="breadcrumbs-area2 mb-3">
+                <div class="container">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h1 class="text-uppercase"><strong>Visitors</strong> Check-in flow</h1>
+                        <!-- <ul class="list-inline breadcrumbs-list">
+                            <li class="list-inline-item">
+                                <h6 class="text-danger">Required fields are marked with *</h6>
+                            </li>
+                        </ul> -->
+                    </div>
+                    <hr>
+                </div>
+            </section>
+            <!-- End Breadcrumbs2-->
+
+            <!-- checkin-flow-->
+            <section id="tabs" class="checkin-flow">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card p-3 shadow-sm my-3">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div class="media text-muted">
+                                        <div class="btn-radius-50 btn btn-light text-theme mr-3">
+                                            <i class="material-icons md-24 pt-1">view_list</i>
+                                        </div>
+                                        <div class="media-body lh-125">
+                                            <div class="text-block">
+                                                <h6 class="text-gray-dark">Visitor Type Based Check-In</h6>
+                                                <p>Enable this to customize the Check-In flow based on visitor type.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="customSwitchVerify1"
+                                            checked>
+                                        <label class="custom-control-label" for="customSwitchVerify1">Required</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="d-lg-flex justify-content-between align-items-center my-3">
+                                <h5 class="m-0">Select Visitor Type for Check-in Flow</h5>
+                                <div class="form-group">
+                                    <select class="form-control">
+                                        <option data-display="Select Visitor Type">Nothing</option>
+                                        <option value="1">Interview</option>
+                                        <option value="2">Employee</option>
+                                        <option value="3">Client</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12">
+                            <div class="card shadow-sm">
+                                <div class="card-header bg-white border-0 p-1">
+                                    <nav>
+                                        <ul class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" id="nav-VisitorFields-tab" data-toggle="tab"
+                                                    href="#nav-VisitorFields" role="tab"
+                                                    aria-controls="nav-VisitorFields" aria-selected="true">Visitor
+                                                    Fields</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="nav-OTPVerify-tab" data-toggle="tab"
+                                                    href="#nav-OTPVerify" role="tab" aria-controls="nav-OTPVerify"
+                                                    aria-selected="false">OTP Verify</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="nav-PhotoCapture-tab" data-toggle="tab"
+                                                    href="#nav-PhotoCapture" role="tab" aria-controls="nav-PhotoCapture"
+                                                    aria-selected="false">Photo Capture </a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="nav-ToVisitFields-tab" data-toggle="tab"
+                                                    href="#nav-ToVisitFields" role="tab"
+                                                    aria-controls="nav-ToVisitFields" aria-selected="false">To Visit
+                                                    Fields</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="nav-NDASign-tab" data-toggle="tab"
+                                                    href="#nav-NDASign" role="tab" aria-controls="nav-NDASign"
+                                                    aria-selected="false">NDA Sign</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" id="nav-BadgePrinting-tab" data-toggle="tab"
+                                                    href="#nav-BadgePrinting" role="tab"
+                                                    aria-controls="nav-BadgePrinting" aria-selected="false">Badge
+                                                    Printing</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                                <div class="card-body bg-light">
+                                    <div class="tab-content" id="nav-tabContent">
+                                        <!-- nav-VisitorFields -->
+                                        <div class="tab-pane fade show active" id="nav-VisitorFields" role="tabpanel"
+                                            aria-labelledby="nav-VisitorFields-tab">
+                                            <form class="custom-forms">
+                                                <div class="row">
+                                                    <div class="col-lg-8 col-md-12">
+                                                        <div class="card shadow-sm my-3">
+                                                            <div class="card-body">
+                                                                <div class="row d-flex align-items-center">
+                                                                    <div class="col-md-8 col-sm-8">
+                                                                        <div class="form-group">
+                                                                            <label class="label-txt">Visitor Full
+                                                                                Name</label>
+                                                                            <input class="form-control" type="text"
+                                                                                required>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4 col-sm-4">
+                                                                        <div class="form-group">
+                                                                            <div class="custom-control custom-switch">
+                                                                                <input type="checkbox"
+                                                                                    class="custom-control-input"
+                                                                                    id="customSwitch1" checked>
+                                                                                <label class="custom-control-label"
+                                                                                    for="customSwitch1">Required</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-lg-8 col-md-12">
+                                                        <div class="card shadow-sm my-3">
+                                                            <div class="card-body">
+                                                                <div class="row d-flex align-items-center">
+                                                                    <div class="col-md-8 col-sm-8">
+                                                                        <div class="form-group">
+                                                                            <label class="label-txt">Visitor Email
+                                                                                ID</label>
+                                                                            <input class="form-control" type="text"
+                                                                                required>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4 col-sm-4">
+                                                                        <div class="form-group">
+                                                                            <div class="custom-control custom-switch">
+                                                                                <input type="checkbox"
+                                                                                    class="custom-control-input"
+                                                                                    id="customSwitch2">
+                                                                                <label class="custom-control-label"
+                                                                                    for="customSwitch2">Required</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-lg-8 col-md-12">
+                                                        <div class="card shadow-sm my-3">
+                                                            <div class="card-body">
+                                                                <div class="row d-flex align-items-center">
+                                                                    <div class="col-md-8 col-sm-8">
+                                                                        <div class="form-group">
+                                                                            <label class="label-txt">To Visit
+                                                                                Name</label>
+                                                                            <input class="form-control" type="text"
+                                                                                required>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4 col-sm-4">
+                                                                        <div class="form-group">
+                                                                            <div class="custom-control custom-switch">
+                                                                                <input type="checkbox"
+                                                                                    class="custom-control-input"
+                                                                                    id="customSwitch3" checked>
+                                                                                <label class="custom-control-label"
+                                                                                    for="customSwitch3">Required</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row d-flex align-items-center">
+                                                    <div class="col-lg-8 col-md-11">
+                                                        <div class="card shadow-sm my-3">
+                                                            <div class="card-body">
+                                                                <div class="row d-flex align-items-center">
+                                                                    <div class="col-md-8 col-sm-8">
+                                                                        <div class="form-group">
+                                                                            <label class="label-txt">Enter Field
+                                                                                Name</label>
+                                                                            <input class="form-control" type="text"
+                                                                                required>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4 col-sm-4">
+                                                                        <div class="form-group">
+                                                                            <div class="custom-control custom-switch">
+                                                                                <input type="checkbox"
+                                                                                    class="custom-control-input"
+                                                                                    id="customSwitch4">
+                                                                                <label class="custom-control-label"
+                                                                                    for="customSwitch4">Required</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-1 col-md-1">
+                                                        <a href="#"><i class="material-icons md-24">delete</i></a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row d-flex align-items-center">
+                                                    <div class="col-lg-8 col-md-11">
+                                                        <div class="card shadow-sm my-3">
+                                                            <div class="card-body">
+                                                                <div class="row d-flex align-items-center">
+                                                                    <div class="col-md-8 col-sm-8">
+                                                                        <div class="form-group">
+                                                                            <label class="label-txt">Enter Field
+                                                                                Name</label>
+                                                                            <input class="form-control" type="text"
+                                                                                required>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4 col-sm-4">
+                                                                        <div class="form-group">
+                                                                            <div class="custom-control custom-switch">
+                                                                                <input type="checkbox"
+                                                                                    class="custom-control-input"
+                                                                                    id="customSwitch5">
+                                                                                <label class="custom-control-label"
+                                                                                    for="customSwitch5">Required</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="offset-md-1 col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label class="label-txt">Add new
+                                                                                option</label>
+                                                                            <input class="form-control" type="text"
+                                                                                required>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="offset-md-1 col-md-6">
+                                                                        <div class="form-group">
+                                                                            <button class="btn btn-outline-theme">Add
+                                                                                new Option</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-1 col-md-1">
+                                                        <a href="#"><i class="material-icons md-24">delete</i></a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-12 mt-5">
+                                                        <div class="form-group">
+                                                            <button id="selected"
+                                                                class="btn btn-outline-theme dropdown-toggle" href="#"
+                                                                data-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">
+                                                                Add a new field
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="#">input field</a>
+                                                                <a class="dropdown-item" href="#">input dropdown
+                                                                    field</a>
+                                                                <a class="dropdown-item" href="#">select option</a>
+                                                                <a class="dropdown-item" href="#">dropdown option</a>
+                                                            </div>
+                                                            <button class="btn btn-theme">Save fields</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <!-- nav-OTPVerify-tab -->
+                                        <div class="tab-pane fade" id="nav-OTPVerify" role="tabpanel"
+                                            aria-labelledby="nav-OTPVerify-tab">
+
+                                            <div class="card p-3 shadow-sm my-3">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="media text-muted">
+                                                        <div class="btn-radius-50 btn btn-light text-theme mr-3">
+                                                            <i class="material-icons md-24 pt-1">sms_failed</i>
+                                                        </div>
+                                                        <div class="media-body lh-125">
+                                                            <div class="text-block">
+                                                                <h6 class="text-gray-dark">Number Verifications</h6>
+                                                                <p>Verify visitor mobile number through
+                                                                    OTP during sign-in for increased security.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customSwitchVerify1" checked>
+                                                        <label class="custom-control-label"
+                                                            for="customSwitchVerify1">Required</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card p-3 shadow-sm my-3">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="media text-muted">
+                                                        <div class="btn-radius-50 btn btn-light text-theme mr-3">
+                                                            <i class="material-icons md-24 pt-1">sms_failed</i>
+                                                        </div>
+                                                        <div class="media-body lh-125">
+                                                            <div class="text-block">
+                                                                <h6 class="text-gray-dark">Number Verifications</h6>
+                                                                <p>Verify visitor mobile number through
+                                                                    OTP during sign-in for increased security.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customSwitchVerify2" checked>
+                                                        <label class="custom-control-label"
+                                                            for="customSwitchVerify2">Required</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- nav-PhotoCapture -->
+                                        <div class="tab-pane fade" id="nav-PhotoCapture" role="tabpanel"
+                                            aria-labelledby="nav-PhotoCapture-tab">
+
+                                            <div class="card p-3 shadow-sm my-3">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="media text-muted">
+                                                        <div class="btn-radius-50 btn btn-light text-theme mr-3">
+                                                            <i class="material-icons md-24 pt-1">camera_alt</i>
+                                                        </div>
+                                                        <div class="media-body lh-125">
+                                                            <div class="text-block">
+                                                                <h6 class="text-gray-dark">Visitor Photos</h6>
+                                                                <p>Capture visitor photos during check-in for security
+                                                                    and recognition.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customSwitchPhotoCapture1" checked>
+                                                        <label class="custom-control-label"
+                                                            for="customSwitchPhotoCapture1">Required</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card p-3 shadow-sm my-3">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="media text-muted">
+                                                        <div class="btn-radius-50 btn btn-light text-theme mr-3">
+                                                            <i class="material-icons md-24 pt-1">photo</i>
+                                                        </div>
+                                                        <div class="media-body lh-125">
+                                                            <div class="text-block">
+                                                                <h6 class="text-gray-dark">Use Existing Photos</h6>
+                                                                <p>Skip the photo capture process for returning
+                                                                    visitors.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customSwitchPhotoCapture2">
+                                                        <label class="custom-control-label"
+                                                            for="customSwitchPhotoCapture2">Required</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- nav-ToVisitFields -->
+                                        <div class="tab-pane fade" id="nav-ToVisitFields" role="tabpanel"
+                                            aria-labelledby="nav-ToVisitFields-tab">
+
+                                            <form class="custom-forms">
+                                                <div class="row">
+                                                    <div class="col-lg-8 col-md-12">
+                                                        <div class="card shadow-sm my-3">
+                                                            <div class="card-body">
+                                                                <div class="row d-flex align-items-center">
+                                                                    <div class="col-md-8 col-sm-8">
+                                                                        <div class="form-group">
+                                                                            <label class="label-txt">To Visit
+                                                                                Name</label>
+                                                                            <input class="form-control" type="text"
+                                                                                required>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4 col-sm-4">
+                                                                        <div class="form-group">
+                                                                            <div class="custom-control custom-switch">
+                                                                                <input type="checkbox"
+                                                                                    class="custom-control-input"
+                                                                                    id="customSwitchTovisitName"
+                                                                                    checked>
+                                                                                <label class="custom-control-label"
+                                                                                    for="customSwitchTovisitName">Required</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row d-flex align-items-center">
+                                                    <div class="col-lg-8 col-md-11">
+                                                        <div class="card shadow-sm my-3">
+                                                            <div class="card-body">
+                                                                <div class="row d-flex align-items-center">
+                                                                    <div class="col-md-8 col-sm-8">
+                                                                        <div class="form-group">
+                                                                            <label class="label-txt">Purpose of
+                                                                                Visit</label>
+                                                                            <input class="form-control" type="text"
+                                                                                required>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4 col-sm-4">
+                                                                        <div class="form-group">
+                                                                            <div class="custom-control custom-switch">
+                                                                                <input type="checkbox"
+                                                                                    class="custom-control-input"
+                                                                                    id="customSwitchPurposeofVisit">
+                                                                                <label class="custom-control-label"
+                                                                                    for="customSwitchPurposeofVisit">Required</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-1 col-md-1">
+                                                        <a href="#"><i class="material-icons md-24">delete</i></a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row d-flex align-items-center">
+                                                    <div class="col-lg-8 col-md-11">
+                                                        <div class="card shadow-sm my-3">
+                                                            <div class="card-body">
+                                                                <div class="row d-flex align-items-center">
+                                                                    <div class="col-md-8 col-sm-8">
+                                                                        <div class="form-group">
+                                                                            <label class="label-txt">Enter Field
+                                                                                Name</label>
+                                                                            <input class="form-control" type="text"
+                                                                                required>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-4 col-sm-4">
+                                                                        <div class="form-group">
+                                                                            <div class="custom-control custom-switch">
+                                                                                <input type="checkbox"
+                                                                                    class="custom-control-input"
+                                                                                    id="customSwitch5">
+                                                                                <label class="custom-control-label"
+                                                                                    for="customSwitch5">Required</label>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="offset-md-1 col-md-6">
+                                                                        <div class="form-group">
+                                                                            <label class="label-txt">Add new
+                                                                                option</label>
+                                                                            <input class="form-control" type="text"
+                                                                                required>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="offset-md-1 col-md-6">
+                                                                        <div class="form-group">
+                                                                            <button class="btn btn-outline-theme">Add
+                                                                                new Option</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-1 col-md-1">
+                                                        <a href="#"><i class="material-icons md-24">delete</i></a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-12 mt-5">
+                                                        <div class="form-group">
+                                                            <button id="selected"
+                                                                class="btn btn-outline-theme dropdown-toggle" href="#"
+                                                                data-toggle="dropdown" aria-haspopup="true"
+                                                                aria-expanded="false">
+                                                                Add a new field
+                                                            </button>
+                                                            <div class="dropdown-menu">
+                                                                <a class="dropdown-item" href="#">input field</a>
+                                                                <a class="dropdown-item" href="#">input dropdown
+                                                                    field</a>
+                                                                <a class="dropdown-item" href="#">select option</a>
+                                                                <a class="dropdown-item" href="#">dropdown option</a>
+                                                            </div>
+                                                            <button class="btn btn-theme">Save fields</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+
+                                        </div>
+
+                                        <!-- nav-NDASign -->
+                                        <div class="tab-pane fade" id="nav-NDASign" role="tabpanel"
+                                            aria-labelledby="nav-NDASign-tab">
+
+                                            <div class="card p-3 shadow-sm my-3">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="media text-muted">
+                                                        <div class="btn-radius-50 btn btn-light text-theme mr-3">
+                                                            <i class="material-icons md-24 pt-1">description</i>
+                                                        </div>
+                                                        <div class="media-body lh-125">
+                                                            <div class="text-block">
+                                                                <h6 class="text-gray-dark">NDA Documents</h6>
+                                                                <p>Display NDA or Legal Documents to
+                                                                    visitors for digital signature.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customSwitchNDASign1" checked="">
+                                                        <label class="custom-control-label"
+                                                            for="customSwitchNDASign1">Required</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card p-3 shadow-sm my-3">
+                                                <div class="media text-muted">
+                                                    <div class="btn-radius-50 btn btn-light text-theme mr-3">
+                                                        <i class="material-icons md-24 pt-1">note_add</i>
+                                                    </div>
+                                                    <div class="media-body lh-125">
+                                                        <div class="text-block">
+                                                            <h6 class="text-gray-dark">Document Data</h6>
+                                                            <p>Paste the document data to display it to the
+                                                                visitors.</p>
+                                                        </div>
+                                                        <div class="my-3">
+                                                            <h6>NON-DISCLOSURE AGREEMENT</h4>
+                                                                <form class="custom-forms">
+                                                                    <div class="row">
+                                                                        <div class="col-md-12">
+                                                                            <div class="form-group">
+                                                                                <textarea class="form-control"
+                                                                                    id="exampleFormControlTextarea1"
+                                                                                    rows="20"
+                                                                                    placeholder="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                                                                    
+                                                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                                                                    
+                                                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+
+                                                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."></textarea>
+                                                                            </div>
+                                                                            <div class="form-group mt-4">
+                                                                                <button class="btn btn-theme">Save
+                                                                                    field</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card p-3 shadow-sm my-3">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="media text-muted">
+                                                        <div class="btn-radius-50 btn btn-light text-theme mr-3">
+                                                            <i class="material-icons md-24 pt-1">restore_page</i>
+                                                        </div>
+                                                        <div class="media-body lh-125">
+                                                            <div class="text-block">
+                                                                <h6 class="text-gray-dark">Returning Visitors Must
+                                                                    Re-sign
+                                                                    The NDA</h6>
+                                                                <p>Visitor must re-sign the NDA or Legal
+                                                                    Documents when re-visited.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customSwitchNDASign2" checked="">
+                                                        <label class="custom-control-label"
+                                                            for="customSwitchNDASign2">Required</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="card p-3 shadow-sm my-3">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="media text-muted">
+                                                        <div class="btn-radius-50 btn btn-light text-theme mr-3">
+                                                            <i class="material-icons md-24 pt-1">no_sim</i>
+                                                        </div>
+                                                        <div class="media-body lh-125">
+                                                            <div class="text-block">
+                                                                <h6 class="text-gray-dark">Visitors Can Skip Digital
+                                                                    Sign
+                                                                </h6>
+                                                                <p>Allow visitors to skip the digital signature.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customSwitchNDASign3">
+                                                        <label class="custom-control-label"
+                                                            for="customSwitchNDASign3">Required</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <!-- nav-BadgePrinting -->
+                                        <div class="tab-pane fade" id="nav-BadgePrinting" role="tabpanel"
+                                            aria-labelledby="nav-BadgePrinting-tab">
+
+                                            <div class="card p-3 shadow-sm my-3">
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <div class="media text-muted">
+                                                        <div class="btn-radius-50 btn btn-light text-theme mr-3">
+                                                            <i class="material-icons md-24 pt-1">assignment_ind</i>
+                                                        </div>
+                                                        <div class="media-body lh-125">
+                                                            <div class="text-block">
+                                                                <h6 class="text-gray-dark">Print visitor badges</h6>
+                                                                <p>Automatically print visitor badges whenever they
+                                                                    check-in.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="custom-control custom-switch">
+                                                        <input type="checkbox" class="custom-control-input"
+                                                            id="customSwitchBadgePrinting1" checked>
+                                                        <label class="custom-control-label"
+                                                            for="customSwitchBadgePrinting1">Required</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End checkin-flow-->
+
+        </div>
+        <!-- End Content-wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="material-icons">navigation</i>
+        </a>
+    </main>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/admin.js"></script>
+
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="vendor/jquery-mousewheel-scrollbar/js/jquery.mCustomScrollbar.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".form-control").focus(function () {
+                $(this).parent().find(".label-txt").addClass('label-active');
+            });
+            $(".form-control").focusout(function () {
+                if ($(this).val() == '') {
+                    $(this).parent().find(".label-txt").removeClass('label-active');
+                };
+            });
+
+        });
+    </script>
+</body>
+
+</html>
