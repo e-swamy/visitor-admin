@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Swamy">
+    <meta name="theme-color" content="#7544e3" />
+    <meta name="keywords" content="">
+    <link href="https://getbootstrap.com/favicon.ico" sizes="16X16" rel="shortcut icon" type="image/png" />
+
+    <title>Entrolog - Dashboard</title>
+
+    <!-- Bootstrap core CSS-->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="vendor/bootstrap/app-style/admin-style.css" rel="stylesheet">
+
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="vendor/jquery-mousewheel-scrollbar/css/jquery.mCustomScrollbar.min.css">
+
+
+</head>
+
+<body id="page-top">
+
+    <!-- Preloder section -->
+    <div class="preloader">
+        <div class="loader">
+            <svg class="circular" viewBox="25 25 50 50">
+                <circle class="path" cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+            </svg>
+        </div>
+    </div>
+
+
+    <!-- Main Wrapper -->
+    <main class="wrapper">
+
+        <!-- Header Section -->
+        <header class="header-area">
+            <nav class="navbar navbar-expand navbar-light bg-admin">
+                <div class="container">
+                    <button class="btn btn-light btn-circle text-theme order-1 order-sm-0" id="sidebarCollapse">
+                        <i class="material-icons text-theme md-18">menu</i>
+                    </button>
+                    <!-- Navbar Search -->
+                    <form class="form-inline mr-auto mr-0 ml-md-3">
+                        <div class="has-search">
+                            <span class="material-icons md-24 form-control-feedback">search</span>
+                            <input type="text" class="form-control" placeholder="Search...">
+                        </div>
+                    </form>
+                    <!-- Navbar -->
+                    <ul class="navbar-nav ml-auto ml-md-0">
+                        <li class="nav-item">
+                            <a class="nav-link invite text-theme" href="new-invites.html">
+                                <span class="pt-2 d-none d-lg-inline-block"><i class="material-icons md-14">add</i> New
+                                    Invite</span>
+                                <span
+                                    class="mt-1 d-xl-none d-lg-none text-theme btn btn-light btn-circle material-icons md-18">add</span>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="material-icons">notifications</i>
+                                <span class="badge badge-danger">9+</span>
+                            </a>
+                            <div class="dropdown-menu notification dropdown-menu-right"
+                                aria-labelledby="alertsDropdown">
+                                <ul>
+                                    <li>
+                                        <div class="drop-title">Your Notifications</div>
+                                    </li>
+                                    <li>
+                                        <div class="notification-center">
+                                            <a href="#">
+                                                <div class="btn btn-danger btn-circle"><i
+                                                        class="material-icons">notifications_none</i></div>
+                                                <div class="notification-contnet">
+                                                    <h5>Luanch Admin</h5> <span class="mail-desc">Just see the my new
+                                                        admin!</span> <span class="time">9:30 AM</span>
+                                                </div>
+                                            </a>
+                                            <a href="#">
+                                                <div class="btn btn-success btn-circle"><i
+                                                        class="material-icons">notifications_none</i></div>
+                                                <div class="notification-contnet">
+                                                    <h5>Event today</h5> <span class="mail-desc">Just a reminder that
+                                                        you have event</span> <span class="time">9:10 AM</span>
+                                                </div>
+                                            </a>
+                                            <a href="#">
+                                                <div class="btn btn-info btn-circle"><i
+                                                        class="material-icons">notifications_none</i></div>
+                                                <div class="notification-contnet">
+                                                    <h5>Settings</h5> <span class="mail-desc">You can customize this
+                                                        template as you want</span> <span class="time">9:08 AM</span>
+                                                </div>
+                                            </a>
+                                            <a href="#">
+                                                <div class="btn btn-primary btn-circle"><i
+                                                        class="material-icons">notifications_none</i></div>
+                                                <div class="notification-contnet">
+                                                    <h5>Pavan kumar</h5> <span class="mail-desc">Just see the my
+                                                        admin!</span>
+                                                    <span class="time">9:02 AM</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a class="pt-2 nav-link text-center" href="javascript:void(0);"> All
+                                            notifications</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle pt-1" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="images/user-profile.png" width="35" alt="profile-user" class="rounded-circle">
+                                <div class="d-none d-xl-inline-block">Swamy</div>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#"><i class="material-icons">settings</i> Settings</a>
+                                <a class="dropdown-item" href="#"><i class="material-icons">style</i> Activity Log</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal"><i
+                                        class="material-icons">exit_to_app</i>
+                                    Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- End Header -->
+
+        <!-- Overlay block -->
+        <div class="menu-overlay"></div>
+
+
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <a href="index.html">
+                    <h2 class="m-0">Entrolog</h2>
+                </a>
+                <!-- branches-dropdown button -->
+                <div class="branches-dropdown">
+                    <a id="selected" class="d-block dropdown-toggle" href="#" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Choose Branch
+                    </a>
+                    <div class="branch-items dropdown-menu">
+                        <a class="dropdown-item" href="#">Hyderabad</a>
+                        <a class="dropdown-item" href="#">Pune</a>
+                        <a class="dropdown-item" href="#">Bangalore</a>
+                        <a class="dropdown-item" href="#">Chennai</a>
+                        <a class="dropdown-item" href="#">kolkata</a>
+                    </div>
+                </div>
+            </div>
+            <ul class="side-menu">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="invites.html">Invites</a>
+                </li>
+                <li class="nav-item active">
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="nav-link dropdown-toggle">Settings</a>
+                    <ul class="collapse show sub-menu" id="pageSubmenu">
+                        <li class="subnav-item active">
+                            <a class="subnav-link" href="account-settings.html">Account</a>
+                        </li>
+                        <li class="subnav-item">
+                            <a class="subnav-link" href="check-in-flow.html">Check-in flow</a>
+                        </li>
+                        <li class="subnav-item">
+                            <a class="subnav-link" href="check-out.html">Check Out</a>
+                        </li>
+                        <li class="subnav-item">
+                            <a class="subnav-link" href="notifications.html">Notifications</a>
+                        </li>
+                        <li class="subnav-item">
+                            <a class="subnav-link" href="security.html">Security</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="devices.html">Devices</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="employee-list.html">Employement Directory</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="integrations.html">Intergration</a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <p>&copy; 2019 - Entrolog <br> All Rights Reserved.</p>
+            </div>
+        </nav>
+        <!-- End Sidebar  -->
+
+        <!-- Content Wrapper  -->
+        <div id="content-wrapper">
+
+            <!-- Breadcrumbs2-->
+            <section class="breadcrumbs-area2 my-3">
+                <div class="container">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h1 class="text-uppercase m-0">
+                            <a href="account-settings.html">
+                                <span class="btn btn-light btn-circle text-theme mr-2">
+                                    <i class="material-icons md-16 pt-0">arrow_back</i>
+                                </span>
+                            </a> Branch Details
+                        </h1>
+                        <!-- <ul class="list-inline breadcrumbs-list">
+                            <li class="list-inline-item">
+                                <h6 class="text-danger">Required fields are marked with *</h6>
+                            </li>
+                        </ul> -->
+                    </div>
+                    <hr>
+                </div>
+            </section>
+            <!-- End Breadcrumbs2-->
+
+            <!--Add accounts settings-->
+            <section class="add-accounts-section py-3">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card shadow-sm mb-3">
+                                <div class="card-body pb-1">
+                                    <div class="card-title mb-3">
+                                        <h4>Location</h4>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-12">
+                                            <form class="custom-forms py-2">
+                                                <div class="form-group">
+                                                    <label class="label-txt">Company Name</label>
+                                                    <input type="text" class="form-control" required="">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="label-txt">Location Name</label>
+                                                    <input type="text" class="form-control" required="">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="label-txt"
+                                                        for="exampleFormControlTextarea1">Address</label>
+                                                    <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                        rows="3"></textarea>
+                                                </div>
+                                                <div class="form-group">
+                                                    <button class="btn btn-theme">Save location
+                                                        details</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="offset-lg-1 col-lg-5 col-md-12">
+                                            <div class="google-map py-2">
+                                                <iframe
+                                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.3968515449437!2d78.39613631487704!3d17.44070968804673!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb914378a3f607%3A0xa481e64ea7ddc1d5!2s91springboard+Kavuri+Hills!5e0!3m2!1sen!2sin!4v1557315973455!5m2!1sen!2sin"
+                                                    width="100%" height="250" frameborder="0" style="border:0"
+                                                    allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="card shadow-sm my-3">
+                                <div class="card-body pb-1">
+                                    <div class="card-title d-flex justify-content-between align-items-center">
+                                        <h4>Admin Details</h4>
+                                        <a href="#" class="text-theme">
+                                            <h6 class="d-flex align-items-center">
+                                                <i class="material-icons md-16">add</i>
+                                                Add Admin
+                                            </h6>
+                                        </a>
+                                    </div>
+                                    <form class="custom-forms py-2">
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label-txt">Admin Name <span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label-txt">Official Email Id <span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label-txt">Phone Number <span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" required="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label-txt">Admin Name <span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label-txt">Official Email Id <span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="form-group">
+                                                    <label class="label-txt">Phone Number <span
+                                                            class="text-danger">*</span></label>
+                                                    <input type="text" class="form-control" required="">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-3 col-md-6">
+                                                <div class="form-group">
+                                                    <button class="btn btn-theme">Save</button>
+                                                    <button class="btn btn-sm btn-light">
+                                                        <i class="material-icons md-16">delete</i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="card shadow-sm my-3">
+                                <div class="card-body">
+                                    <div class="card-title mb-3">
+                                        <h4>Company Logo</h4>
+                                    </div>
+                                    <div class="media text-muted pt-3">
+                                        <div class="btn-radius-50 btn btn-light text-theme mr-3">
+                                            <i class="material-icons md-24 pt-1">domain</i>
+                                        </div>
+                                        <p class="media-body pb-3 mb-0 lh-125">
+                                            <span class="font-weight-bold d-block text-dark">Logo</span>
+                                            Upload a logo that will appear on the Tab, badges and invites.
+                                        </p>
+                                    </div>
+                                    <div class="company-info mt-4">
+                                        <div class="row">
+                                            <div class="col-md-4 mb-3">
+                                                <div class="logo-here">
+                                                    <img src="images/entro_labs_logo_original.png" width="200"
+                                                        class="img-fluid" alt="logo">
+                                                </div>
+                                                <button class="mt-4 btn btn-theme" type="file">Upload</button>
+                                            </div>
+                                            <div class="col-lg-6 col-md-8">
+                                                <div class="upload-file">
+                                                    <div class="row">
+                                                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 form-group">
+                                                            <div class="custom-file">
+                                                                <input type="file" class="custom-file-input"
+                                                                    id="customFile">
+                                                                <label class="custom-file-label" for="customFile">Choose
+                                                                    file</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="file-info">
+                                                        <p class="text-muted">We recommend uploading a transparent PNG
+                                                            cropped
+                                                            to the edges of your logo and up to 1000px width or 600px
+                                                            height.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End add-accounts-->
+
+        </div>
+        <!-- End Content-wrapper -->
+
+        <!-- Scroll to Top Button-->
+        <a class="scroll-to-top rounded" href="#page-top">
+            <i class="material-icons">navigation</i>
+        </a>
+    </main>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/admin.js"></script>
+
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="vendor/jquery-mousewheel-scrollbar/js/jquery.mCustomScrollbar.min.js"></script>
+   
+    <script>
+        $(document).ready(function () {
+            $(".form-control").focus(function () {
+                $(this).parent().find(".label-txt").addClass('label-active');
+            });
+            $(".form-control").focusout(function () {
+                if ($(this).val() == '') {
+                    $(this).parent().find(".label-txt").removeClass('label-active');
+                };
+            });
+
+        });
+    </script>
+</body>
+
+</html>
